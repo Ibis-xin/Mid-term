@@ -1,0 +1,36 @@
+$bg: #232323;
+$ghost: #ffD700;
+$shadow-yellow: #f9fed8;
+$shadow-blue: #ACE8FE;
+$shadow-purple: #D6EBEE;
+
+body {
+	background-color: $bg;
+}
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+#bubble {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	circle {
+		filter: url(#goo);
+	}
+	&_1, &_2, &_3, &_4 {
+		fill: $ghost;
+	}
+}
+.eggwhite{
+  background-color:#ffffff;/*背景顏色*/
+  width:500px;/*寬度*/
+  height:500px;/*高度*/
+  border-radius:50%;/*邊角內縮*/
+  z-index:-1;/*Z軸編號 -1*/
+  position: absolute;/*固定絕對位置*/
+  bottom: 10%;/*與下方距離*/
+  right: 30%;/*與右方距離*/
+}
